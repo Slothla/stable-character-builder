@@ -53,7 +53,7 @@ Stable 不要求所有角色安装同一套模块。
 
 完整架构重构可以重新组织整张角色卡，但**不等于把所有机制都装进去**。相邻功能可以合并，无关功能保持缺席；长卡需要更清晰的语义检索边界，而不是单纯增加标题和字数。
 
-## Character / Runtime / Scenario 三层结构
+## 角色 / 运行时 / 场景三层架构（Character / Runtime / Scenario）
 
 Stable 的核心架构将角色卡分成三个责任层。
 
@@ -100,7 +100,7 @@ Stable 不默认使用单一的“好感度”。
 
 重要关系变化需要来自真正发生过的、与该维度有关的证据。
 
-## Player Authorship
+## 玩家创作权（Player Authorship）
 
 玩家已经明确写出的言行是事实。
 
@@ -112,7 +112,7 @@ Stable 不默认使用单一的“好感度”。
 
 Stable 将这种玩家权属保护作为 Runtime 的基础能力，而不是可有可无的风格偏好。
 
-## Knowledge Scope 与信息不对称
+## 知识边界与信息不对称（Knowledge Scope）
 
 角色不会因为作者知道某件事，就自动知道那件事。
 
@@ -122,7 +122,7 @@ Stable 可以区分 Known、Observable、Inferred、Hidden、Forbidden 等知识
 
 这对于悬疑、秘密身份、慢热关系和多角色信息差特别重要。
 
-## 状态、Tracker 与连续性
+## 状态、追踪器与连续性（Tracker）
 
 Stable 支持跨回合状态，但不会默认把所有东西数字化。
 
@@ -136,7 +136,7 @@ Tracker 应该记录已经发生事件造成的后果，而不是自己制造角
 
 能够从已有状态推导出的结果，尽量推导，不重复存储。
 
-## Gate、Beat 与 Long-Term Attractor
+## 门槛、事件节点与长期吸引子（Gate / Beat / Long-Term Attractor）
 
 Stable 将三种经常被混淆的机制分开。
 
@@ -150,7 +150,7 @@ Gate 开启不会强迫剧情发生；Beat 是候选事件，不是铁路时刻�
 
 这样可以实现有结构的开放剧情，而不是另一种形式的剧情铁路。
 
-## Anti-Drift
+## 防漂移（Anti-Drift）
 
 Stable 会针对具体角色识别最可能出现的错误吸引子，例如突然变成通用温柔角色、过早坦白、无条件奖励玩家、把竞争写成敌意、把害羞写成没有行动能力等。
 
@@ -162,7 +162,7 @@ Stable 会针对具体角色识别最可能出现的错误吸引子，例如突�
 
 它不仅规定“现在不能这样”，还可以说明“未来在什么情况下这样才会变成合理行为”，避免 Anti-Drift 最后把角色冻死在初始状态。
 
-## Recovery Architecture
+## 恢复架构（Recovery Architecture）
 
 模型已经写坏一轮以后，不一定需要删档重来。
 
@@ -174,7 +174,7 @@ Stable 使用：
 
 这允许角色从一次 OOC 中恢复，而不是让一次错误回复永久改写人格。
 
-## Design-Time Simulation
+## 设计阶段模拟（Design-Time Simulation）
 
 对于抽象规则仍然无法可靠预测的复杂行为，Stable 可以在设计阶段进行少量内部模拟。
 
@@ -190,7 +190,7 @@ Stable 使用：
 
 它不会假装在脑内“连续测试几百回合”。
 
-## Targeted Stress Testing
+## 针对性压力测试（Targeted Stress Testing）
 
 生成前还可以进行针对性压力测试。
 
@@ -198,7 +198,7 @@ Stable 使用：
 
 目标不是证明“这个角色永远不会出错”，而是在交付前捕获明显的架构漏洞。
 
-## Root-Cause Debugging
+## 根因调试（Root-Cause Debugging）
 
 如果真实游玩中已经出现问题，Stable 优先找根因，而不是继续在卡里叠补丁。
 
@@ -206,7 +206,7 @@ Stable 使用：
 
 修复以后，旧补丁应被删除，而不是无限堆积。
 
-## Optional Explicit Adult Scene Runtime
+## 可选成人场景运行时（Explicit Adult Scene Runtime）
 
 对于明确需要**详细成人场景**的虚构成年角色，可以启用独立的 Explicit Adult Scene Runtime。
 
@@ -218,7 +218,7 @@ Stable 使用：
 
 它明确避免两个极端：从第一次接触瞬间冲到高潮，以及为了“慢节奏”退化成每轮只做一个微动作。
 
-## Adult Intimacy Pattern Grammar
+## 成人亲密互动模式语法（Adult Intimacy Pattern Grammar）
 
 成人内容不是一个固定动作清单。
 
@@ -230,7 +230,7 @@ Stable 使用生成式 Pattern Grammar，将互动拆分成 initiation、control
 
 角色自己的性格模型仍然是最终选择器。
 
-## Physical Choreography 与身体连续性
+## 身体动作编排与连续性（Physical Choreography）
 
 详细场景可以保持人物朝向、距离、接触面、肢体位置、支撑点、重心、家具和衣物限制等物理事实。
 
@@ -238,7 +238,7 @@ Stable 使用生成式 Pattern Grammar，将互动拆分成 initiation、control
 
 同时，这不是要求每一轮都写成关节检查表。系统只跟踪当前动作真正需要的物理信息。
 
-## Somatic Response Grammar
+## 身体反应语法（Somatic Response Grammar）
 
 身体反应不是固定的“喘、抖、脸红”三件套。
 
@@ -246,7 +246,7 @@ Stable 可以根据当前刺激、姿势、强度、疲劳、关系状态以及�
 
 身体反应本身不自动等于同意、情感认同或关系升级。
 
-## Climax & Continuation
+## 高潮与场景延续（Climax & Continuation）
 
 在成人 Runtime 中：
 
@@ -256,7 +256,7 @@ Stable 可以根据当前刺激、姿势、强度、疲劳、关系状态以及�
 
 系统不会默认要求所有人必须高潮、必须 aftercare、必须多次高潮，也不会因为高潮自动触发告白、信任、治愈或恋爱升级。
 
-## Interaction Controls
+## 互动控制（Interaction Controls）
 
 如果用户明确需要，可以加入 safeword、stop command、pause / resume 或其他互动控制。
 
@@ -271,7 +271,7 @@ Stable 可以根据当前刺激、姿势、强度、疲劳、关系状态以及�
 
 玩家看到控制方式的位置，与 Runtime 真正执行控制规则的位置会被区分开，避免重要控制只存在于 Intro 里却没有实际运行规则。
 
-## Intro 与 Greeting
+## 玩家说明与开场（Intro / Greeting）
 
 完整角色卡会从 Character、Runtime 和 Scenario 中推导 Intro 与 Greeting，而不是把它们当成两个独立作文题。
 
@@ -328,15 +328,15 @@ Stable 会根据角色真正的复杂度决定需要多少架构，只在缺失�
 
 而是做**能够用最小必要架构稳定运行的角色卡**。
 
-## Responsibility
+## 使用责任
 
 用户需要自行对自己创建的角色卡及其使用方式负责。
 
-## License
+## 许可
 
 采用 **Creative Commons Attribution 4.0 International (CC BY 4.0)** 许可。
 
-## Author
+## 作者
 
 Created by **sloth03**
 
