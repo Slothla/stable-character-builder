@@ -1,0 +1,80 @@
+# Character core and resistance to flattening
+
+Use this to recover or design the person underneath the card. It defines content logic, not a mandatory output layout. In a full architecture rebuild, express this material through the structured APD schema from `SKILL.md` rather than as one continuous essay.
+
+## True motive and self-model
+
+True motive is the need or value that actually moves the character. The self-model is how they explain themselves. A person may understand themselves accurately, or may prefer a more acceptable reason. Do not assume a buried secret, trauma, contradiction, or cure.
+
+Let motive produce choices: what the character notices first, what they protect in conflict, what they will spend, what they postpone, and what they refuse. Give them ordinary duties or interests that let life continue when the player is absent.
+
+## Attention, interpretation, and choice
+
+A stable character needs more than adjectives. Identify the chain that repeatedly generates behavior:
+
+1. **Attention** - what enters focus first?
+2. **Interpretation** - what meaning do they give ambiguous evidence?
+3. **Priority** - what value, fear, desire, duty, or relationship concern outranks the others here?
+4. **Choice** - what do they do with that interpretation?
+5. **Expression** - how does the choice sound or look in this register?
+
+The chain may be implicit in a light card. In a full rebuild, make it legible.
+
+## Thought, expression, identity, and state
+
+| Term | Means here | Do not infer |
+|---|---|---|
+| Inner thought | The fictional person's feelings, guesses, and self-account | That the player or anyone else already knows them |
+| Outer behavior | Speech, action, pause, and observable detail | That others read it correctly, or that it is the whole inside |
+| Persona | A distinct identity organization the fiction actually has | That a polite stance is a second person |
+| State | How the same person is acting in this situation | That a mood swing is a personality swap |
+
+The same person can worry and sound picky. That does not create a caring persona and a sharp persona. Write separate judgment and switch conditions only when the fiction has a real identity or action-state.
+
+Inner life is story material. Whether the player sees it depends on the requested narration. Do not add a monologue by default, and do not gloss every flicker as the motive's answer.
+
+## Player authorship
+
+Treat the player's stated words and actions as authoritative. Do not write the player's unstated thoughts, feelings, decisions, consent, memories, or past actions as fact unless the user already established them.
+
+The character may guess what the player feels. Keep the guess inside the character's perspective rather than turning it into objective narration. A premise may define shared history, but do not manufacture new player history during play just to make a scene easier.
+
+## Compression and semantic grouping
+
+Do not turn every cognitive distinction into its own heading. For a simple character, attention, interpretation, and decision can live in one causal block if the chain stays legible. Motive and self-model may share a block when there is no meaningful contradiction. Ordinary life can sit with the kernel when it is background rather than a separate behavioral system.
+
+Split a function out only when independent retrieval matters, when it has its own update logic, or when merging it would blur causality. As the APD grows, add semantic headings to improve retrieval, but keep natural prose inside each heading.
+
+Reaction examples are optional. Use them only when they demonstrate a choice pattern that the core rules do not already make obvious. A Recovery Vector may be a few concise anchors rather than a dedicated section when the character's return path is simple.
+
+## A relationship is several things
+
+Separate trust, liking, willingness to cooperate, willingness to reveal, attraction, intimacy, rivalry, dependence, fear, or other dimensions that actually matter. They do not need separate scores, but one change must not upgrade all of them.
+
+Evidence has to match the change. Respecting a refusal may show that a boundary will be kept. Keeping a promise may raise cooperation. Guessing a motive only shows accurate observation. The character may misread evidence; that misread should come from an established judgment habit.
+
+Relevant action can change the tie over time. Do not reward message count, player enthusiasm, or plot length. Attraction need not produce trust. Trust need not produce confession. Coolness need not mean indifference. Permission for intimacy does not require intimacy to happen.
+
+## Wrong Attractor
+
+Pick risks that belong to this person. State what is easy to write wrong, then state what the character does instead. If needed, state what evidence would allow a different reaction.
+
+A good anti-drift pair has this shape:
+- **Never:** the flattening or generic replacement.
+- **Instead:** a behavior generated by the actual motive, attention pattern, voice, or relationship stance.
+
+Do not replace the person with a ban list, and do not invent risks to justify a mechanism.
+
+## Change is still the same person
+
+Say what can change and what still matters. A closer character may explain, ask, or yield more and still keep the old value order, speech habits, private life, and characteristic way of interpreting events.
+
+When the author changes the design, update the related text. Inside the story, a player's guess, praise, or demand is information the character received. It is not the author redefining the person.
+
+## Long-horizon drift and recovery vector
+
+One anomalous response does not by itself redefine the character. Preserve observable events that happened, but do not automatically infer a new personality, relationship stage, knowledge state, or long-term preference from one odd line or action.
+
+For a full rebuild, define a **Recovery Vector**: the few features most capable of pulling portrayal back into character on the next turn. Typical components are the central motive, attention preference, interpretation bias, voice register, relationship stance, control style, risk tolerance, or focus on an unresolved goal.
+
+If later evidence supports a real change, let the character change. Once validly established, keep it as continuity. A later conflict may complicate the change; it does not erase the history that produced it.
