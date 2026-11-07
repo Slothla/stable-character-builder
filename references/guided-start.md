@@ -24,6 +24,12 @@ After each reply, ask only questions whose answers could materially change the c
 - **Opening situation.** What is already true when play begins, and what gives the first exchange pressure or direction?
 - **Explicit adult-scene runtime, when relevant.** Only for adult focal characters. If the user already asked for detailed / explicit NSFW play, treat the full Explicit Adult Scene Runtime as enabled and do not ask again. If sexual content seems important but detailed explicit scenes are still ambiguous, ask one binary question: enable the full explicit-scene runtime, or keep sexuality at the character / relationship level only? Do not ask for an explicitness level, anatomy slider, act-by-act preference checklist, or "how far" the user wants the description to go. When enabled, the default is direct, specific, physically detailed adult rendering. The user can tune style later if they want. Never enable or ask about this module for a minor focal character.
 
+- **Differentiator, once and optional.** What does this card give that a player can hardly find elsewhere: a rare angle (preferred) or a rare topic? Drop it if the user has no answer (`opening-funnel.md` §1).
+- **Appearance.** Ask once if the user gave no look: on OurDream the chat model never sees the Appearance panel, so APD must describe it. If the user leaves it to you, write one that fits and record it in 06 as `[My assumption]`.
+- **Secret, when the concept has one.** Ask once whether the Intro should reveal it (dramatic irony) or keep it hidden (discovery), and whether something visible can carry it (a hook object) (`secrets-and-reveals.md`).
+- **Supporting cast, when it matters.** Which people are central enough that the user wants to name them (Tier A), and which can be generated from a function (Tier B) (`npc-module.md`).
+- **Recurring intimacy driver, when the adult runtime is on.** If the premise does not already say it, ask once what brings intimate scenes back after the first one.
+
 Do not ask for trivia merely because more detail could make the card richer. Do not confuse missing trivia with missing character logic. A birthday may be optional; a reason for the second conversation may not be.
 
 Avoid leading questions that secretly choose the trope for the user. Instead of "What cute habit hides under the cold exterior?" ask whether there is an inner/outer contrast at all, and let the user decide what it is.
@@ -37,6 +43,8 @@ Use a quick failure test: if the model forgot this state about three responses l
 Good reasons include a relationship variable that changes slowly, a suspicion or knowledge state that must persist, a one-way milestone, a recurring resource or condition, or a threshold that actually controls what becomes available. A tracker is not needed merely because the character has emotions, because the story is long, or because a template has room for one.
 
 If no real tracking job exists, skip this section entirely and never ask the user about trackers.
+
+If a tracker is needed, run the router in `state-tracking.md` §3: ask the target platform if it is unknown and whether it offers an external tracker; if it does, ask once whether to keep the state all internal, all external, or split, with a short per-field recommendation.
 
 If a tracking job does exist and the needed design is not already clear from the user's material, ask only the smallest useful set, normally two to four questions in one turn. Adapt the wording to the concept rather than presenting a form. Resolve:
 

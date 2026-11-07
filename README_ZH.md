@@ -136,6 +136,14 @@ Tracker 应该记录已经发生事件造成的后果，而不是自己制造角
 
 能够从已有状态推导出的结果，尽量推导，不重复存储。
 
+确实需要跨回合状态时，Stable 会决定**每个字段由谁维护**：
+
+- **Internal（内部）**：由对话模型在每次回复末尾重写的隐藏块里维护。部署简单，最擅长判断一件事意味着什么。
+- **External（外部）**：由平台自带的追踪系统维护（例如 OurDream 的 State Trackers 面板）。不依赖对话模型的记忆，可以显示在 HUD 上。
+- **Hybrid（混合）**：按字段拆分，绝不镜像。每个字段只有一个所有者。
+
+分流依据是**因果时序**：本轮回复前就必须重新算出的值（因为它决定角色此刻能做什么）放 Internal；主要用来记录、持久化或显示本轮结果的值适合 External。只有卡确实需要追踪时才会问 Tracker 的事，只有平台提供外部系统时才会问用哪种后端。
+
 ## 门槛、事件节点与长期吸引子（Gate / Beat / Long-Term Attractor）
 
 Stable 将三种经常被混淆的机制分开。
@@ -212,7 +220,7 @@ Stable 使用：
 
 这个模块是可选的，不会因为角色有吸引力、会调情或拥有性生活就自动安装。
 
-开启后也不会继续询问“想写到几级”“需要多少解剖细节”等复杂档位。默认进入完整的直接、具体、身体细节明确的成人场景 Runtime，后续如果用户希望更含蓄、文学化或 fade-to-black，再作为普通修改处理。
+开启后也不会继续询问“想写到几级”“需要多少解剖细节”等复杂档位。默认进入完整的直接、具体、身体细节明确的成人场景 Runtime，后续如果用户希望更含蓄、文学化或 fade-to-black，再作为普通修改处理。模块会按角色编译（这个角色先注意什么、怎样主动、反应怎样随强度变化），而不是把一套通用动作库原样贴进卡里。
 
 该 Runtime 包含场景阶段控制、身体位置与空间连续性、Somatic Response Grammar、跨场景变化、Climax / Continuation 逻辑以及成人场景专用 Anti-Drift。
 
@@ -281,6 +289,19 @@ Greeting 执行准确的开场状态，给出角色的判断、行动或台词�
 
 默认五文件格式下，Intro 控制在 **2000 字符以内**。Greeting 默认没有 2000 字符限制，除非目标平台另有要求。
 
+## 共享可选模块
+
+只有通过模块准入测试时才安装：
+
+- **配角 NPC**：精度分级；每个 NPC 一段带目标和知识范围的简短档案；命名规则避开模型的默认名字池；除非卡本身就是为此设计，男性 NPC 不作为恋爱竞争者。
+- **秘密与揭示**：只在设定里真有秘密时使用；包括秘密的类型，以及 Intro 是否揭示。
+- **开场漏斗**：标题、卡片列表那一行、Intro、Greeting 和前 5-10 轮，决定玩家会不会开聊、会不会继续。
+- **漂移清单**：作者侧的常见模型漂移清单；构建时只挑出这张卡真正面临的几条，不整份粘贴。
+
+## 平台适配：OurDream
+
+Skill 保持平台中立，另带一个可选的 **OurDream（OD）** 平台层：字段上限；对话模型实际收到哪些内容（外观面板不会送到对话模型，所以外貌必须用文字写进卡里）；群聊加载规则；以及 OD State Trackers 面板的完整适配，包括平台的状态注入格式和已验证的群聊行为。群聊结论只针对 OD，没在别的平台测过不会照搬。
+
 ## 输出格式
 
 默认完整输出为五个英文文本文件：
@@ -291,6 +312,10 @@ Greeting 执行准确的开场状态，给出角色的判断、行动或台词�
 `04_Intro.txt`  
 `05_Greeting.txt`
 
+另附一份作者侧的 `06_Notes.txt`，用用户自己的语言写成，记录用户的决定、构建者的假设、用过的名字、安装的模块和版本记录。它不会粘贴进卡里。
+
+如果卡使用外部 Tracker，面板配置会单独交付（OurDream 上为 `07 State`）。
+
 也可以根据用户要求改为其他语言、合并文档、特定平台格式或其他 schema。
 
 ## 仓库结构
@@ -300,19 +325,32 @@ stable-character-builder/
 ├── SKILL.md
 ├── README.md
 ├── README_ZH.md
+├── CHANGELOG.md
+├── CHANGELOG_ZH.md
 ├── LICENSE
 ├── agents/
 │   └── openai.yaml
+├── VERSION.txt
+├── assets/
+│   └── icon.svg
 └── references/
+    ├── adult-intimacy-module.md
     ├── adult-intimacy-patterns.md
-    ├── adult-intimacy-runtime.md
     ├── architecture-rebuild.md
+    ├── author-notes-06.md
     ├── character-core.md
     ├── design-time-simulation.md
+    ├── drift-checklist.md
     ├── guided-start.md
+    ├── npc-module.md
+    ├── od-platform.md
+    ├── od-state-adapter.md
+    ├── opening-funnel.md
     ├── optional-mechanisms.md
     ├── output-modes.md
+    ├── secrets-and-reveals.md
     ├── stability-debugging.md
+    ├── state-tracking.md
     └── user-guide.md
 ```
 

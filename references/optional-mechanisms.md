@@ -78,6 +78,12 @@ Before finalizing a tracked design, check four things:
 - Do stored and derived values remain consistent rather than duplicating or contradicting one another?
 - Is the tracker recording consequences instead of manufacturing character motivation or forcing the next beat?
 
+Once a tracker is needed, choose its backend with the router in `state-tracking.md` (internal, external, or split; ask about the platform only then), and carry it with the platform's adapter (`od-state-adapter.md` for OurDream).
+
+## Supporting NPCs and secrets: only when they do work
+
+Supporting characters get capsules only when they pressure scenes, carry part of a secret, or give the character a life outside the player; follow `npc-module.md`. A secret section exists only when the concept actually has a secret; never invent one to fill a slot (`secrets-and-reveals.md`).
+
 ## Persona or state: only when the fiction has one
 
 First check whether the difference really changes judgment, goal, or available knowledge. Stubbornness, professional courtesy, or a change of tone usually stays in the inner/outer gap.
@@ -96,12 +102,12 @@ For a light card, one or two runtime lines may do this. For a full architecture 
 
 ## Explicit Adult Scene Runtime: binary install
 
-Install the full module only for fictional adult characters when detailed explicit sexual scenes are part of the intended play. Read `adult-intimacy-runtime.md` and its author-side `adult-intimacy-patterns.md` when enabled.
+Install the full module only for fictional adult characters when detailed explicit sexual scenes are part of the intended play. Read `adult-intimacy-module.md` and its author-side `adult-intimacy-patterns.md` when enabled.
 
 - If the user explicitly requested detailed / explicit NSFW play, treat the module as enabled.
 - If explicit scenes seem relevant but the request is ambiguous, ask one binary enable/disable question.
 - If disabled, keep sexuality in ordinary character and relationship logic without detailed scene machinery.
-- If enabled, do not ask for explicitness tiers or a content-detail slider. Default to direct, specific, anatomically clear, physically detailed adult rendering. The user can revise the style later.
+- If enabled, do not ask for explicitness tiers or a content-detail slider. Default to direct, specific, anatomically clear, physically detailed adult rendering, and write that default into ED as an operative line. The user can revise the style later.
 - Keep the pattern library out of the final card. Compile only character-specific sexual logic, scene pacing, physical continuity, somatic response, bounded variation, climax / continuation behavior, and any needed relationship semantics.
 - Do not install universal dominance, submission, kink counts, climax counts, denial rules, aftercare requirements, or other house-style assumptions. Those belong to the character or user request, not the module.
 
@@ -117,4 +123,6 @@ When enabled, separate **player disclosure** from **runtime authority**:
 - **Do not use cross-reference placeholders.** `See Intro`, `use the safeword from Intro`, or equivalent wording in ED is insufficient because the runtime must not need to guess or recover the control from another field.
 - **Do not force IC exposition.** The character does not need to verbally teach, announce, remember, or discuss the safeword in Greeting or normal roleplay unless the user explicitly requests an in-character briefing or makes it part of the story.
 
-Do not add generic legal, ethical, or platform-policy text as a mechanism. The target platform and model apply their own rules and capabilities.
+### Safety-language budget
+
+Follow the safety / interaction-control budget in the main Skill (Section 3). Interaction controls reduce the need for generic safety prose; they do not erase real mechanic boundaries such as `power-induced bodily response != voluntary action`. Do not encode platform-policy boilerplate into the card.

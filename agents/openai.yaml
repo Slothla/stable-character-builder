@@ -1,4 +1,20 @@
 interface:
-  display_name: "Stable Character Builder"
-  short_description: "Build or structurally rebuild stable single-protagonist roleplay cards"
-  default_prompt: "Build, revise, or structurally rebuild a stable single-protagonist roleplay card from this material. For a full-card improvement, preserve canon but do not preserve weak document architecture by default. Separate Character, Runtime, and Scenario; make attention, interpretation, decision logic, knowledge scope, evidence-based change, gates, beats, continuity, anti-drift, lightweight delivery guard, and recovery explicit where they have real jobs. Use the all-English five-part default unless I name another format or language."
+  display_name: Stable Character Builder
+  short_description: Build or structurally rebuild stable single-protagonist roleplay
+    cards
+  default_prompt: Build, revise, or structurally rebuild a stable single-protagonist
+    roleplay card from this material. For a full-card improvement, preserve canon
+    but do not preserve weak document architecture by default. Separate Character,
+    Runtime, and Scenario; make attention, interpretation, decision logic, knowledge
+    scope, evidence-based change, gates, beats, continuity, anti-drift, lightweight
+    delivery guard, and recovery explicit where they have real jobs. Use the all-English
+    five-part default unless I name another format or language.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

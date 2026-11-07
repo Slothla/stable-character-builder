@@ -25,13 +25,15 @@ Preserve the person's logic while mapping it into the target platform's fields. 
 | 03 Scenario | English | What is true now, who knows what, what pressures are active, and what possibilities are currently open |
 | 04 Intro | English | Player-facing premise and attraction |
 | 05 Greeting | English | The first real exchange from the exact opening |
+| 06 Notes | User's chat language | Author-side record of intent, decisions, assumptions, names used, versions; never pasted into a card field (`author-notes-06.md`) |
 
-For a full default build or rebuild, deliver five separate plain-text files named:
+For a full default build or rebuild, deliver five separate plain-text card files plus the author-side 06 Notes, named:
 - `01_APD.txt`
 - `02_ED.txt`
 - `03_Scenario.txt`
 - `04_Intro.txt`
 - `05_Greeting.txt`
+- `06_Notes.txt`
 
 ## Structural floor for a new build
 
@@ -41,6 +43,7 @@ Useful minimums:
 
 ### 01 APD
 - Identity and ordinary life
+- Appearance in prose (OurDream's chat model never sees the Appearance panel)
 - True motive and self-model
 - Attention, interpretation, and decision habits
 - Voice and inner/outer expression
@@ -82,15 +85,16 @@ This is functional repetition, not waste.
 
 Intro lets a player decide whether to enter. It does not automatically reveal unreleased secrets. When an interaction control such as a safeword is enabled, Intro may contain a concise OOC/player-facing notice explaining the trigger and its basic purpose. That notice is disclosure to the player, not character dialogue and not a substitute for the ED rule.
 
-In the default five-file format, **Intro is hard-capped at 2000 characters**. Prefer a clean shorter Intro over squeezing extra lore into the limit.
+In the default five-file format, **Intro is hard-capped at 2000 characters** (target about 1,600). Prefer a clean shorter Intro over squeezing extra lore into the limit. Its first sentence is the card-tile line and must work alone as the ad; see `opening-funnel.md`.
 
 Greeting performs the person, runtime, and situation. It must:
 - begin from the exact opening state;
 - have the character do or say something consistent with current knowledge and priorities;
 - leave real room for player response;
-- avoid inventing unstated player thoughts, feelings, choices, consent, intent, or history.
+- avoid authoring non-inferable player content: thoughts, feelings, choices, consent, intent, or history (see Player Authorship in the main Skill);
+- demonstrate only habits the runtime should repeat; it is the strongest output example.
 
-Greeting has no default 2000-character cap. Use the length the opening needs unless the target platform supplies another verified constraint.
+Greeting has no default 2000-character cap (OurDream caps it at 10,000). Use the length the opening needs. It carries a charged hook and a playable ending (`opening-funnel.md` §5).
 
 If an interaction control is enabled, ED must independently contain the literal trigger and full operative behavior. Never write only `see Intro` or an equivalent cross-reference in ED. The character does not need to explain the control in Greeting or normal IC prose unless the user explicitly requests an in-character briefing.
 

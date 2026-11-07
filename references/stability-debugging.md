@@ -28,6 +28,7 @@ Common attractors include:
 - knowledge bleed because the model knows a secret;
 - one anomalous reply being treated as permanent growth;
 - every turn escalating, progressing, or deepening the relationship;
+- performing every signature trait or tic each turn to prove consistency, or treating a situationally irrelevant trait's absence as drift;
 - conflict being simplified by declaring one genuine motive fake;
 - state-local knowledge or behavior leaking into another state;
 - recovery rules overcorrecting into emotional flatness or refusal to change.
@@ -58,7 +59,7 @@ When playtesting exposes a failure, do not immediately add another paragraph. Di
 1. **Ownership** - is the rule in the layer that actually controls the failure?
 2. **Retrieval / position** - is the critical rule buried inside a long unrelated block?
 3. **Superseded prose** - does an older rule still exist and compete with the fix?
-4. **Priming** - does Greeting, an example, or repeated wording teach the opposite behavior?
+4. **Priming** - does Greeting, an example, repeated wording, or the overall distribution of examples teach the opposite behavior? A rule that marks a behavior as occasional can still lose if most examples showcase it.
 5. **Initialization** - is required state defined but never initialized or carried forward?
 6. **Leak route** - is there another path by which forbidden knowledge or behavior becomes available?
 7. **State ambiguity** - are `eligible`, `due`, `delivered`, `known`, or similar states being collapsed together?
@@ -79,7 +80,7 @@ Examples:
 - replace a vague ban with a concrete alternative;
 - turn a boolean milestone into distinct states when `available`, `occurred`, and `delivered` are different facts;
 - close the actual knowledge leak rather than adding another generic secrecy reminder;
-- change the Greeting if it is priming the wrong behavior;
+- change the Greeting or rebalance the examples if they are priming the wrong behavior or over-demonstrating a supposedly rare / conditional trait;
 - remove a tracker if it is manufacturing motivation rather than preserving continuity.
 
 After the fix, rerun only the probes relevant to that failure plus one opposite-direction probe to catch overcorrection.

@@ -111,7 +111,7 @@ Do not manufacture mechanisms for decorative traits.
 
 APD must make the person independently legible before scenario mechanics are added.
 
-A good APD should survive replacement of the current scenario. If removing the current plot makes the personality collapse, too much story logic leaked into Character.
+A good APD, together with ED, should survive replacement of the current scenario (see Dependency direction in the main Skill, Section 4). If removing the current plot makes the personality collapse, too much story logic leaked into Character.
 
 For Light cards, prefer a few semantic blocks over a field-by-field personality form. Attention, interpretation, and decision may share one block when they form one clear causal chain. Ordinary life may live beside the character kernel when it needs no separate control logic. A Reaction Library is optional; add examples only when they teach behavior that the generator itself does not already make clear.
 
