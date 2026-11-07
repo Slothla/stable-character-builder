@@ -146,6 +146,14 @@ Trackers record consequences of established events. They should not manufacture 
 
 Whenever possible, Stable stores causes and derives consequences rather than maintaining redundant independent values.
 
+When a card does need persistent state, Stable decides **who maintains each field**:
+
+- **Internal**: the chat model keeps the state in a hidden block it rewrites every reply. Simple to deploy and strongest at judging what an event means.
+- **External**: the platform's own tracker system keeps the state (for example, OurDream's State Trackers panel). It persists independently of the chat model and can drive a HUD.
+- **Hybrid**: split by field, never mirrored. Every field has exactly one owner.
+
+The choice follows **causal timing**: a value that must be recomputed before the current reply (because it gates or branches what the character may do now) stays Internal; a value whose job is to record, persist, or display the result of the exchange fits External. Stable asks about trackers only when a card actually needs one, and asks which backend to use only when the platform offers an external system.
+
 ## Gates, Beats, and Long-Term Attractors
 
 Stable separates three functions that are often mixed together.
@@ -228,7 +236,7 @@ The module is not installed merely because a character is attractive, flirtatiou
 
 When explicit detailed play is clearly requested, the full module can be enabled directly. It does not introduce a separate explicitness ladder, anatomy slider, or long questionnaire.
 
-When enabled, the default is direct, specific, anatomically clear, physically detailed adult rendering. Softer, more literary, less physiological, or fade-to-black styles can be requested later as normal revisions.
+When enabled, the default is direct, specific, anatomically clear, physically detailed adult rendering. The module is compiled into each character (what they notice, how they initiate, how their responses change with intensity) rather than pasted as a generic repertoire. Softer, more literary, less physiological, or fade-to-black styles can be requested later as normal revisions.
 
 The module adds scene-stage pacing, physical choreography, body continuity, somatic response, pattern variation, climax and continuation logic, and adult-specific anti-drift checks.
 
@@ -297,6 +305,19 @@ Greeting performs the exact opening state, expresses the character's judgment an
 
 In the default five-file format, Intro is limited to **2000 characters**. Greeting has no default 2000-character cap unless a target platform requires one.
 
+## Shared Optional Modules
+
+Installed only when they pass the Module Admission Test:
+
+- **Supporting NPCs**: precision tiers, a short capsule per NPC with objective and knowledge, naming rules that avoid the model's default name pool, and the rule that male NPCs are not romantic competitors unless the card is built for that.
+- **Secrets and Reveals**: only when the concept has a secret; secret kinds and whether the Intro reveals it.
+- **Opening Funnel**: the title, the card-tile line, the Intro, the Greeting, and the first 5-10 exchanges decide whether a chat starts and continues.
+- **Drift Checklist**: an author-side list of common model drift patterns; the builder selects the few that apply to the card instead of pasting the list.
+
+## Platform Adaptation: OurDream
+
+The Skill stays platform-neutral, with one optional platform layer for **OurDream (OD)**: field caps, what the chat model actually receives (the Appearance panel never reaches it, so the look must be written in prose), group-chat loading, and a full adapter for OD's State Trackers panel, including the platform's state-injection format and verified group-chat behavior. Group-chat findings are OD-specific and are not applied to other platforms without testing.
+
 ## Output Format
 
 The default complete delivery is a five-file English set:
@@ -306,6 +327,10 @@ The default complete delivery is a five-file English set:
 `03_Scenario.txt`  
 `04_Intro.txt`  
 `05_Greeting.txt`
+
+plus an author-side `06_Notes.txt` in the user's own language. It records the user's decisions, the builder's assumptions, the names used, installed modules, and a version log. It is never pasted into the card.
+
+If a card uses an external tracker, its panel configuration is delivered separately (for OurDream, `07 State`).
 
 The output can instead be delivered in another language, as one combined document, or adapted to another requested platform schema or format.
 
@@ -329,19 +354,32 @@ stable-character-builder/
 ├── SKILL.md
 ├── README.md
 ├── README_ZH.md
+├── CHANGELOG.md
+├── CHANGELOG_ZH.md
 ├── LICENSE
 ├── agents/
 │   └── openai.yaml
+├── VERSION.txt
+├── assets/
+│   └── icon.svg
 └── references/
+    ├── adult-intimacy-module.md
     ├── adult-intimacy-patterns.md
-    ├── adult-intimacy-runtime.md
     ├── architecture-rebuild.md
+    ├── author-notes-06.md
     ├── character-core.md
     ├── design-time-simulation.md
+    ├── drift-checklist.md
     ├── guided-start.md
+    ├── npc-module.md
+    ├── od-platform.md
+    ├── od-state-adapter.md
+    ├── opening-funnel.md
     ├── optional-mechanisms.md
     ├── output-modes.md
+    ├── secrets-and-reveals.md
     ├── stability-debugging.md
+    ├── state-tracking.md
     └── user-guide.md
 ```
 

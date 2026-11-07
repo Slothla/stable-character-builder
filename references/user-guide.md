@@ -34,20 +34,26 @@ If the user asks for the overview, tutorial, supported functions, or available f
 | Gate Engine | Define what becomes available under which conditions | Conditional reveals, abilities, relationship moves, or stronger actions |
 | Beat Engine | Generate condition-based candidate events from the current state | Runtime-heavy or plot-active cards without railroading |
 | Long-Term Attractors | Plausible directions the story may tend toward without forcing an ending | Long-form RP |
-| Player Authorship | Protect unstated player thoughts, feelings, choices, consent, history, and actions from being invented | Default runtime protection |
+| Player Authorship | Never invent the player's decisions, voluntary actions, dialogue, thoughts, feelings, consent, or history; inferable physical consequences of what they set up may be rendered | Default runtime protection |
 | Anti-Drift | NEVER + INSTEAD rules for actual failure modes | Prevent genericization, overconfession, flattening, or archetype drift |
 | Delivery Guard | Lightweight check for high-cost violations such as player authorship, knowledge leakage, gate breach, continuity break, or hard format requirements | Default when those risks matter |
 | Recovery Architecture | Detect -> Classify -> Preserve -> Reframe -> Reassert after an already-delivered bad turn | Recover from OOC or drift without casually rewriting history |
 | Design-Time Simulation | Run a few disposable pressure probes, then extract stable causal rules instead of shipping canned example scenes | Clarify uncertain behavior before compilation |
 | Targeted Stress Testing & Debugging | Test actual failure modes and diagnose ownership, retrieval, priming, stale rules, state ambiguity, collisions, and overcorrection before adding patches | Playtest repair and stability review |
-| Explicit Adult Scene Runtime | Optional all-or-nothing detailed NSFW runtime with direct physical rendering, stage pacing, body continuity, somatic response, pattern variation, and climax / continuation logic | Adult cards intended for detailed explicit sexual play |
+| Explicit Adult Scene Runtime | Optional all-or-nothing detailed NSFW runtime: direct physical rendering, character-driven initiative, body continuity, voice fragmentation, recurring driver and signature hook, optional own-pleasure initiative, pacing and author parameters, climax / continuation logic | Adult cards intended for detailed explicit sexual play |
+| Supporting NPCs | Precision tiers, capsules with objective and knowledge, naming rules, ensemble behavior | Cards whose supporting cast pressures scenes or carries secrets |
+| Secrets & Reveals | Reveal-gated or no-hint secrets, Intro-reveal choice, hook objects | Only when the concept has a secret |
+| State Tracking | Internal, external, or split tracker backends with one owner per field; platform adapters (OurDream: hidden state block or State Trackers panel) | Any card with persistent state |
+| Opening Funnel | Title, card-tile line, Intro, Greeting hook, first 5-10 exchanges, pull check | Every card |
+| OurDream Platform Layer | Field caps, what the chat model reads, appearance in APD, group-chat loading, translation | OurDream cards |
+| 06 Notes | Author-side record of intent, decisions, assumptions, names, versions | Delivered with every card |
 | Interaction Controls | Safeword, stop command, pause/resume, or comparable controls | Only when requested or already canonical |
 | Scenario Architecture | Premise, opening relationship, established facts, knowledge distribution, active pressure, gates, beat candidates, attractors, continuity anchors | Complete playable setup |
 | Intro & Greeting | Player-facing premise and a playable opening derived from the core architecture | Full card delivery |
 | Existing Card Repair | Local edits, structural rewrite, stability review, or targeted runtime fixes | Existing cards with known problems |
 | Full Architecture Rebuild | Recompile canon into Character / Runtime / Scenario while preserving the person rather than the old layout | Complete-card overhaul |
 | Confirmation Mode | Either show a compact design summary first or generate directly | User-selected workflow preference |
-| Output Format | Default five-file English set, or another requested language, combined document, platform schema, or format | Delivery customization |
+| Output Format | Default five-file English set plus 06 Notes, or another requested language, combined document, platform schema, or format | Delivery customization |
 
 After the table, add one concise note in the user's language:
 

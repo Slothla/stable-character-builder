@@ -1,6 +1,6 @@
 ---
 name: stable-character-builder
-description: "Create, structurally rebuild, revise, review, or adapt stable single-protagonist roleplay character cards, persona cards, character bots, and AI roleplay characters. Use for new character design, guided concept development, full-card improvement or optimization, architecture rebuilds, local edits, stability reviews, and platform or format conversion. Preserves canonical character content while making motive, cognition, runtime logic, player authorship, knowledge limits, evidence-based change, continuity, anti-drift, and recovery explicit. Platform-neutral, with an all-English five-part set as the default. Not for general fiction or co-equal multi-protagonist ensembles."
+description: "Create, structurally rebuild, revise, review, or adapt stable single-protagonist roleplay character cards, persona cards, character bots, and AI roleplay characters. Use for new character design, guided concept development, full-card improvement or optimization, architecture rebuilds, local edits, stability reviews, and platform or format conversion. Preserves canonical character content while making motive, cognition, runtime logic, player authorship, knowledge limits, evidence-based change, continuity, anti-drift, and recovery explicit. Platform-neutral with an OurDream platform layer, an all-English five-part set as the default, plus an author-side 06 Notes record. Not for general fiction or co-equal multi-protagonist ensembles."
 ---
 
 # Stable Character Builder
@@ -37,6 +37,7 @@ Do not mistake added headings, cleaner prose, or renamed sections for a structur
 - Do not preserve weak architecture merely because it already exists.
 - Distinguish **content preservation** from **document preservation**. A rebuild may radically reorganize the card while keeping the same person.
 - Ask only when a missing fact would materially change identity, interaction logic, or delivery format. Fill smaller gaps with a concise stated assumption.
+- Treat an example the user gives to illustrate a rule as an example, not as canon. If an assumption you made becomes story canon (a date, scheduled event, purchase, prior history, relationship fact, NPC name, or a locked format choice the user left open), record it in 06 Notes under `[My assumption]` so the user can confirm or strike it ([references/author-notes-06.md](references/author-notes-06.md)).
 - One focal protagonist. Supporting characters may pressure the scene; do not add a co-equal ensemble scheduler.
 
 ## 3. Guided start for sparse concepts
@@ -47,13 +48,27 @@ Do not force the interview when the user supplied enough detail. The user may sa
 
 During guided design, silently assess whether the character has a real cross-turn progression problem that benefits from persistent tracking. Only if such a job exists, ask the lightweight progression-state questions in `guided-start.md`. If no tracker is needed, do not mention trackers or ask tracker questions. If the source or user already defines the needed state logic, preserve or adapt it without reopening the questionnaire unless a material design choice is still missing.
 
-Also assess whether the card is intended for **detailed explicit adult sexual scenes**. If the user already requested explicit / detailed NSFW play, treat that as opting into the full Explicit Adult Scene Runtime and read [references/adult-intimacy-runtime.md](references/adult-intimacy-runtime.md). If explicit scenes seem relevant but the user has not clearly opted in, ask one binary enable/disable question. Do not ask for explicitness tiers, anatomical-detail sliders, or a checklist of how explicit the user wants the prose. When enabled, the module defaults to direct, specific, physically detailed adult rendering; later style changes are ordinary revision requests. If disabled, sexuality may still exist as character or relationship logic without installing detailed scene machinery.
+Also assess whether the card is intended for **detailed explicit adult sexual scenes**. If the user already requested explicit / detailed NSFW play, treat that as opting into the full Explicit Adult Scene Runtime and read [references/adult-intimacy-module.md](references/adult-intimacy-module.md). If explicit scenes seem relevant but the user has not clearly opted in, ask one binary enable/disable question. Do not ask for explicitness tiers, anatomical-detail sliders, or a checklist of how explicit the user wants the prose. When enabled, the module's **rendering default** is direct, specific, anatomically clear, physically detailed adult rendering, with no automatic fade-to-black or euphemism. Write this default into ED as an operative line; do not paraphrase it into something softer. Later style changes are ordinary revision requests. If disabled, sexuality may still exist as character or relationship logic without installing detailed scene machinery.
+
+When the concept is still open, you may ask once what this card gives that a player can hardly find in other cards: a rare angle (preferred) or a rare topic. Never push toward the bizarre; drop the question if the user has no answer ([references/opening-funnel.md](references/opening-funnel.md) §1).
 
 For a New build, Structural rewrite, or Full architecture rebuild, use the confirmation-mode logic in Section 9. Respect any confirmation preference the user has already stated; do not ask again when they already chose direct generation or confirmation-first.
 
 Default the focal character to an adult when age is unspecified. Resolve gender rather than guessing silently; the user may explicitly delegate that choice. If the focal character is a minor, do not design romantic or sexual relationship content for that character.
 
-Do not add generic legal, ethical, or platform-policy boilerplate to the card. Add interaction controls such as a safeword only when requested or when already canonical to the supplied design. When such a control is enabled, separate player-facing disclosure from runtime authority: the Intro may tell the player the control exists, but the ED must contain the complete operative rule. Do not make the character explain the control in-character unless the user asks for that presentation.
+When an adult character's adulthood needs emphasis (a sweet-faced or youthfully styled adult, or a user worried about age misreading), establish it in APD with concrete positive adult facts: age stated once, adult build, adult responsibilities, competence, and social life. Where a real risk remains, add at most one explicit exclusion at its primary owner (for example, a fashion or costume that never enters sexual scenes). Do not scatter repeated anti-youth negations across files or into the character's own voice; negations repeat the very vocabulary they are meant to keep out.
+
+Out-of-character agreements (a safeword, a premise the player opted into before play, a backdoor the player was told about) are ED runtime rules, never part of the character's knowledge or self-model unless the fiction gives the character an in-story source; the character never cites them in the story.
+
+Do not add generic legal, ethical, or platform-policy boilerplate to the card. Keep safety-like prose only when it performs a concrete runtime job or preserves a user-requested / canonical interaction control. The model and target platform apply their own governing policies outside the card.
+
+Use a **safety / interaction-control budget** instead of repeating the same consent language across layers:
+- **With an explicit safeword / stop control or standing delegated-permission premise:** keep one authoritative player-authorship rule, the complete operative interaction-control rule, and only mechanic-specific distinctions that materially change behavior. Do not duplicate generic consent reminders in APD, Scenario, Anti-Drift, and adult-runtime prose merely for emphasis.
+- **Without such an interaction control:** keep player authorship authoritative and allow at most one concise ED statement about current willingness / consent semantics when the route needs it. Additional generic consent or permission reminders are padding unless they encode a genuinely different mechanic.
+- A rule that separates bodily effects from voluntary choice, defines a supernatural control boundary, or otherwise changes the fiction is **mechanic logic**, not removable boilerplate. Preserve it at its primary owner and avoid re-explaining it elsewhere.
+- The character's own preferences, standards, moods, refusals, and freedom to decline are **character logic**, not consent prose. Keep them in APD; they do not count against this budget.
+
+Add interaction controls such as a safeword only when requested or when already canonical to the supplied design. When such a control is enabled, separate player-facing disclosure from runtime authority: the Intro may tell the player the control exists, but the ED must contain the complete operative rule. Do not make the character explain the control in-character unless the user asks for that presentation.
 
 ## 4. Three ownership layers
 
@@ -66,6 +81,15 @@ Do not add generic legal, ethical, or platform-policy boilerplate to the card. A
 **Character != Runtime != Scenario.**
 
 A fact belongs where it does work. Do not let APD become a rule engine, ED become a biography, or Scenario redefine the person's values.
+
+**Dependency direction: Scenario is swappable.** APD + ED define the person and how the person is played; together they must stay valid under any Scenario, route, or storyline. Scenario may rely on APD and ED. APD and ED must never depend on Scenario content:
+- do not write Scenario-owned facts (current relationship, dates, scheduled events, route-specific characters, locations, story gates, the opening situation) into APD or ED;
+- do not cross-reference them there (`as in the Scenario`, `the convention on the 16th`);
+- when ED needs story state, refer to it content-agnostically (`the date the story has established`, `any scheduled commitment already in play`);
+- take examples inside APD and ED from the character's own life or keep them generic, not from the current route;
+- a fact every route must honor belongs in APD, not Scenario.
+
+Test: mentally replace the Scenario with a different route. If any APD or ED line becomes false, dangling, or route-specific, move it to Scenario or rewrite it generically.
 
 When designing or checking the character core, read [references/character-core.md](references/character-core.md).
 
@@ -87,11 +111,15 @@ Before installing a substantial optional mechanism, apply the **Module Admission
 
 If the third answer is "nothing important," omit the mechanism. Read [references/optional-mechanisms.md](references/optional-mechanisms.md) for the lightweight install rules.
 
+**Length:** persistent text (APD + ED + Scenario) has a soft reference ceiling of about 90,000 characters for a single-focal-character card. It is a ceiling, not a target: the budget above decides the real length, most cards should be far shorter, and the Skill author's best performers were under 10,000. RPG or heavy sandbox cards may exceed it with the reason recorded in 06. **Platform router:** if the target platform is unknown and it matters (field caps, group use, a tracker backend), ask once. Platform-specific modules load only for their platform: for OurDream, read [references/od-platform.md](references/od-platform.md) (field caps, what the chat model receives, group-chat loading, macros, memory, translation) and, when a tracker is installed, [references/od-state-adapter.md](references/od-state-adapter.md). For other platforms, keep the architecture and map formats and state to that platform's own mechanisms.
+
+Shared optional modules (install only through the Module Admission Test): supporting NPCs [references/npc-module.md](references/npc-module.md); secrets and reveals, only when the concept has a secret [references/secrets-and-reveals.md](references/secrets-and-reveals.md); state tracking for any installed tracker [references/state-tracking.md](references/state-tracking.md).
+
 Keep specialized presentation or platform machinery separate from character complexity. Image-generation footers, strict formatting protocols, HUDs, export adapters, or similar output systems may add substantial text without making the character itself more complex; do not use them as justification to inflate APD, ED, or Scenario.
 
 As a card grows, increase **semantic sectioning** even when functions remain merged. Long cards need clear retrieval boundaries. Do not confuse de-templating with de-structuring: natural prose is welcome inside a semantic block, but one long block should not carry several unrelated runtime jobs.
 
-Prefer one **primary owner** for a concept. Repeat it across Character / Runtime / Scenario only when each occurrence performs a distinct execution job. When a secondary layer only needs the consequence, state the consequence briefly instead of re-explaining the whole concept.
+Prefer one **primary owner / source of truth** for a concept. Repeat it across Character / Runtime / Scenario only when each occurrence performs a distinct execution job. When a secondary layer only needs the consequence, state the consequence briefly instead of re-explaining the whole concept. Universal runtime invariants such as player authorship, knowledge boundaries, interaction-control semantics, and relationship-evidence rules normally belong in ED; do not restate them as APD virtues or Scenario lore unless the fiction itself changes their meaning.
 
 For detailed rebuild guidance, read [references/architecture-rebuild.md](references/architecture-rebuild.md).
 
@@ -116,6 +144,7 @@ Treat this as a **candidate coverage map, not a form and not a mandatory install
 1. **Character Kernel** - identity, role, stable values, central desire, ordinary competence.
 2. **True Motive & Self-Model** - what actually moves the character; how they explain themselves; do not invent a contradiction.
 3. **Ordinary Life** - duties, interests, relationships, routines, and stakes that exist without the player.
+3b. **Appearance** (always) - the look in prose: hair, eyes, build, the body details play needs, usual clothing, form traits and when they show. On OurDream the chat model never sees the Appearance panel or image prompt, so APD is the only place the look exists in chat. Add a name-translation line when names could be translated inconsistently.
 4. **Attention Model** - what they notice first, what they routinely ignore, what details pull focus.
 5. **Interpretation Biases** - how they explain ambiguous behavior; recurring misreads; what evidence can correct them.
 6. **Decision Tendencies** - what they protect, trade, risk, postpone, or refuse under pressure.
@@ -128,15 +157,18 @@ Treat this as a **candidate coverage map, not a form and not a mandatory install
 ### 02 ED - Runtime Rules
 
 1. **Priority & Scope** - the runtime's order of authority and what this file governs.
-2. **Player Authorship** - the player's stated words/actions are authoritative; never invent their unstated thoughts, feelings, choices, consent, memories, or history.
+2. **Player Authorship** - the player's stated words/actions are authoritative. This is the primary owner of player authorship; other sections refer to it. Separate **inferable** from **non-inferable** player content:
+   - *Inferable* (may be rendered): observable results and involuntary physical consequences that follow directly from what the player or the established scene has already set up - wet clothes after they walk into rain, breathlessness after a sprint they wrote, a bodily response their own input has clearly led to.
+   - *Non-inferable* (never authored): the player's decisions, voluntary actions, dialogue, thoughts, feelings, intentions, consent, memories, history, or any new fact about them.
+   - When a bodily response is not clearly set up by the player's input, leave it to the player. A premise that defines imposed bodily effects (for example, a supernatural power) follows its own mechanic rule; the effect still never becomes the player's choice, feeling, or consent.
 3. **Knowledge Scope** - distinguish Known / Observable / Inferred / Hidden / Forbidden or an equivalent readable structure. Author knowledge is not character knowledge.
-4. **Runtime State & Continuity** - persist facts with consequences, unresolved hooks, latched states, and meaningful changes. Prefer discrete state over numeric trackers unless counting has a real job.
+4. **Runtime State & Continuity** - persist facts with consequences, unresolved hooks, latched states, and meaningful changes. Prefer discrete state over numeric trackers unless counting has a real job. Define every installed tracker and route its backend (internal, external, or split) with the router in [references/state-tracking.md](references/state-tracking.md) §3. Carriers are platform-adapter details: on OurDream use [references/od-state-adapter.md](references/od-state-adapter.md); on other platforms map the same semantics to that platform's own persistence.
 5. **Decision Loop** - perceive -> interpret -> prioritize -> choose -> act -> observe consequence -> update. The character's interpretation must mediate between input and action.
 6. **Gate Engine** - define what is currently allowed to become available. A gate opens a possibility; it does not force an event.
 7. **Beat Engine** - for runtime-heavy cards, use condition -> opportunity -> interpretation -> decision -> event -> consequence. Beats are candidates, not a railway timetable.
 8. **Relationship Change Logic** - require relevant evidence for meaningful change; specify what changes and what persists. Message count, praise, and mind-reading guesses are not automatic evidence.
 9. **Expression Rules** - only the voice, narration, inner-thought, formatting, or register rules that the runtime must actively enforce.
-10. **Anti-Drift** - write NEVER + INSTEAD pairs for real failure modes. Bans without replacement behavior are incomplete.
+10. **Anti-Drift** - write NEVER + INSTEAD pairs for real failure modes. Bans without replacement behavior are incomplete. Select the few real risks from [references/drift-checklist.md](references/drift-checklist.md) (author-side; never paste the list); its assistant-drift locks are optional, each with its own admission condition; none is a default. For relationship growth, prefer paired change axes (what may change, what stays) over freeze locks.
 11. **Delivery Guard** - a lightweight final guard for high-cost violations only: player authorship, forbidden-knowledge leakage, gate breach, continuity break, and hard output requirements. Do not add a verbose checkbox ritual or self-scoring report.
 12. **Recovery Architecture** - Detect -> Classify -> Preserve -> Reframe -> Reassert. Preserve observable events when possible; do not let one bad turn become a new personality trajectory.
 13. **Interaction Controls** - only if requested or canonical. The ED is the authoritative runtime location. Include the literal trigger token or phrase, its immediate effect, what it does not undo, any resume condition, and relevant aftermath. Never replace the ED rule with `see Intro`, `as stated in Intro`, or another cross-reference. A player-facing notice may also appear in Intro, but Intro is not the runtime source of truth. Do not require the character to state the control in Greeting, dialogue, narration, or inner thought unless the user explicitly wants an in-character briefing.
@@ -146,35 +178,38 @@ Treat this as a **candidate coverage map, not a form and not a mandatory install
 1. **Premise** - one clear statement of the playable situation.
 2. **Entry State & Current Relationship** - where the relationship actually stands at the opening, without granting unsupported trust or intimacy.
 3. **Established Facts** - facts already true before the Greeting.
-4. **Knowledge Distribution** - who knows, suspects, misreads, or cannot know each relevant fact.
+4. **Knowledge Distribution** - who knows, suspects, misreads, or cannot know each relevant fact. Secrets only when the concept has one; secret kinds and Intro-reveal choice follow [references/secrets-and-reveals.md](references/secrets-and-reveals.md).
+4b. **Supporting NPCs** - only those who do real work; precision tier, capsule with objective and knowledge, naming rules, and the male-NPC rule per [references/npc-module.md](references/npc-module.md).
 5. **Active Threads & Pressure** - unresolved needs, tensions, resources, risks, or opportunities already in motion.
 6. **Story Gates** - story-specific conditions that make certain revelations, locations, abilities, relationship moves, or consequences available.
-7. **Beat Candidates** - a compact set of condition-based local events. Do not schedule them by day unless the premise truly requires a calendar.
+7. **Beat Candidates** - a compact set of condition-based local events. Do not schedule them by day unless the premise truly requires a calendar. Include two or three reachable within the first few exchanges ([references/opening-funnel.md](references/opening-funnel.md) §6).
 8. **Long-Term Attractors** - plausible directions the story may grow toward. They are not mandatory endings.
 9. **Continuity Anchors** - facts, consequences, promises, damaged objects, revealed secrets, or latched changes that should not silently reset.
-10. **Exact Opening Situation** - precise time/place/immediate action and pressure from which the Greeting is derived.
+10. **Exact Opening Situation** - precise time/place/immediate action and pressure from which the Greeting is derived. Write it as story fact, not as instructions to whoever writes the Greeting.
 
 For every build, use only the parts that have jobs. A **full architecture rebuild** means the whole card may be reorganized; it does not mean the whole mechanism library must be installed. Light cards may satisfy several APD or ED functions inside one semantic block. Standard and Runtime-heavy cards should split functions only where independent retrieval or control is useful.
 
-When the **Explicit Adult Scene Runtime** is enabled, do not create a sixth core ownership layer. Compile stable sexual character logic into APD, scene execution into ED, and route-specific access or conditions into Scenario according to [references/adult-intimacy-runtime.md](references/adult-intimacy-runtime.md). Read [references/adult-intimacy-patterns.md](references/adult-intimacy-patterns.md) as author-side source material only when that module is installed.
+When the **Explicit Adult Scene Runtime** is enabled, do not create a sixth core ownership layer. Compile stable sexual character logic into APD, scene execution into ED, and route-specific access or conditions into Scenario according to [references/adult-intimacy-module.md](references/adult-intimacy-module.md). Read [references/adult-intimacy-patterns.md](references/adult-intimacy-patterns.md) as author-side source material only when that module is installed.
 
 ## 8. Runtime design principles
 
 - True motive is not the same as self-account. They may match.
 - Inner thought and outer behavior are expression, not separate identities unless the fiction truly contains separate identities or states.
+- Traits, roles, habits, and competencies are a repertoire, not a per-turn checklist. Activate only the facets the current situation makes relevant; a trait can remain canonical while absent from one response.
 - Being understood, praised, or talked to for a long time is not automatic trust, confession, cooperation, or intimacy.
 - A relationship is multidimensional. Attraction can rise while trust stays low; trust can rise without disclosure.
 - Character change must follow from relevant evidence that actually happened. Growth is not replacement; stability is not freeze.
 - One anomalous reply does not redefine personality, relationship stage, knowledge state, or long-term preference.
 - Preserve already-observable events when repairing drift. Reinterpret unsupported meaning before reaching for retcon.
 - Use trackers only when forgetting the state later would create a real continuity or progression failure. Prefer discrete states and latches. Store values with independent history; derive labels or consequences that can be computed from them. A tracker records consequences of established events; it must not manufacture motive or force behavior merely because a label or number changed.
+- Write tracker, gate, and progression rules in narrative language (what becomes reachable in the scene, step by step), not in consent or legal vocabulary ([references/drift-checklist.md](references/drift-checklist.md) §E).
 - Gates decide **can happen**. Beats decide **what might happen next**. Long-term attractors decide **where the story may tend**. Never collapse these three.
 - Add a mechanism because a real failure needs control, not because a template has an empty slot. Read [references/optional-mechanisms.md](references/optional-mechanisms.md) for optional mechanics.
 - For high-risk drift, write the wrong attractor as an executable failure, not a vague label. Prefer `Wrong behavior -> why wrong -> correct alternative -> legal transition condition` when all four parts matter.
 - When abstract rules are difficult to trust, use a few design-time simulations to discover stable generators rather than adding full dialogue examples. Read [references/design-time-simulation.md](references/design-time-simulation.md).
 - When real play exposes a bug, diagnose ownership, retrieval, stale rules, priming, initialization, leak routes, state ambiguity, collisions, and overcorrection before adding new machinery. Read [references/stability-debugging.md](references/stability-debugging.md).
 - Re-check the architecture budget if a conceptually simple card starts growing heavy. Extra prose must earn its cost just as extra mechanisms do.
-- Do not make the same idea fully explain itself in multiple layers. Give it one primary owner, then use short operational consequences elsewhere when needed.
+- Do not make the same idea fully explain itself in multiple layers. Give it one primary owner, then use short operational consequences elsewhere when needed. Repeated safety language is duplication like any other; Section 3 sets its budget.
 
 ## 9. Confirmation mode and playable opening
 
@@ -196,17 +231,23 @@ Use the user's language naturally rather than forcing this exact English wording
 
 After Character, Runtime, and Scenario are complete and any requested confirmation is resolved, write Intro and Greeting.
 
-- **Intro** is player-facing. It explains the premise and attraction without automatically revealing unreleased secrets. It may include a concise OOC/player-facing notice for an interaction control such as a safeword when that control is enabled.
+Read [references/opening-funnel.md](references/opening-funnel.md) before writing them: the title, the card-tile line, the Intro, the Greeting, and the first 5-10 exchanges decide whether a chat starts and continues.
+
+- **Intro** is player-facing. It sells what the player will actually do and feel, without automatically revealing unreleased secrets. Its first sentence is the card-tile line and must work alone as the ad: second person, a charged fact or a situation inversion. Target about 1,600 characters. It may include a concise OOC/player-facing notice for an interaction control such as a safeword when that control is enabled.
 - **Intro must not exceed 2000 characters** in the default five-file format. Treat this as the hard limit for `04_Intro.txt`; write shorter rather than crowding the ceiling.
-- **Greeting** performs the exact opening once: judgment, action or speech, and room for the player to answer.
-- Greeting must not invent the player's unstated thoughts, feelings, choices, consent, intentions, or prior actions.
-- Greeting has no default 2000-character cap. Size it to the scene unless the target platform or user supplies a different verified limit.
+- **Greeting** performs the exact opening once: judgment, action or speech, and room for the player to answer. It carries at least one charged element the player wants to answer and ends on something concrete and easy to answer.
+- Greeting must not author non-inferable player content (Section 7, ED item 2): thoughts, feelings, choices, consent, intentions, or prior actions.
+- Greeting is the strongest output example the runtime will imitate. Do not let it demonstrate a defect: no author voice inside the character's thoughts or speech (for example, the character justifying their own age or legitimacy), no runtime explanation, no habit you would not want repeated every turn.
+- Greeting has no default 2000-character cap (OurDream caps it at 10,000). Size it to the scene. After delivering it, ask the user to check that its style and point of view are what they want.
 - Greeting or Intro must never be the only place a critical runtime rule exists. If an interaction control is enabled, ED must independently specify the complete operative rule.
 - Player-facing disclosure is not in-character disclosure. Do not force the character to mention a safeword or other control in Greeting, dialogue, narration, or inner thought merely because the Intro tells the player about it.
+- Treat APD, ED, and Scenario as the logical layers the runtime reads; whether each one is injected every turn depends on the platform (on OurDream, a card added to a group chat loads only APD and ED). Do not leave author-side instructions in them, such as how the Greeting must be written or what it must contain; that guidance stays in this Skill.
+
+Before delivery, run the applicable acceptance tests in Section 10. This applies to new builds as well as rewrites and rebuilds.
 
 ## 10. Architecture acceptance tests
 
-Before delivering a full rebuild, check all applicable tests.
+Before delivering any new build, structural rewrite, or full architecture rebuild, check all applicable tests. Tests that only make sense for a rebuild, such as the structural-delta test, apply only to rebuilds.
 
 ### Structural-delta test
 
@@ -220,6 +261,8 @@ From APD alone, another model should be able to answer:
 - What do they protect or prioritize?
 - How does that become a choice?
 - How do they sound while doing it?
+
+**Identity-swap check:** replace the character's identity (occupation, trained skills, history, interests, defining traits) with a different one. If an answer would still fit unchanged, it is generic; derive it from this character's own attention, skills, and life instead.
 
 ### Runtime test
 
@@ -237,7 +280,11 @@ Scenario must provide opportunities rather than a railroad. At least one plausib
 
 ### Player-authorship test
 
-Delete or rewrite any line that turns an unstated player feeling, motive, choice, consent, memory, or action into fact.
+Delete or rewrite any line that turns non-inferable player content (Section 7, ED item 2) into fact: an unstated feeling, motive, choice, consent, memory, voluntary action, or new fact about the player. Inferable physical consequences of what the player or scene already established are allowed.
+
+### Scenario-independence test
+
+Mentally swap the Scenario for a different route. APD + ED must still produce the same person and a working runtime. Flag any APD or ED line that names, depends on, or cross-references Scenario-owned facts (Section 4, Dependency direction).
 
 ### Self-authorizing gate test
 
@@ -273,37 +320,77 @@ If playtesting has already exposed a real failure, use the root-cause order in [
 
 ### Explicit adult-runtime test
 
-Only when the Optional Explicit Adult Scene Runtime is enabled, check that:
+Only when the Optional Explicit Adult Scene Runtime is enabled, first verify that the module was actually **compiled into this character**, not merely mentioned. Also run the diagnosis questions and failure checks in [references/adult-intimacy-module.md](references/adult-intimacy-module.md) §16 (recurring driver, signature hook, service collapse, attention budget). Another model should be able to answer from the card:
+1. What does this character notice first in adult intimacy?
+2. How do they initiate or shape interaction in a way specific to them?
+3. How does their expression or somatic response change as intensity changes?
+4. How do they generate variation from current context instead of drawing from a generic repertoire?
+5. What character-specific continuation or aftermath directions are available after a peak or pause?
+6. What generic adult-content persona is the character most likely to drift into, and what concrete behavior restores them?
+
+If several answers reduce to "according to context," "naturally," or another generic placeholder, or fail the identity-swap check (Behavior-generation test), the module is only partially compiled. Add character-specific generators before delivery; the strongest ones usually extend the character's everyday attention and trained skills into intimacy.
+
+Also confirm that ED states the rendering default from Section 3 as an operative line (unless the user chose another style), and that the user's explicit adult-play requests (for example, "highly inventive") were compiled into generators rather than hedged back with generic counterweights such as "novelty is optional." A softened paraphrase of either counts as missing.
+
+Then check that:
 - explicit detail stays character-specific instead of causing an adult-mode personality swap;
 - pacing neither jumps from initiation to climax immediately nor stalls into one trivial action per reply;
 - body position, support, movement, and contact remain physically continuous;
 - reactions vary with the active stimulus instead of repeating a stock set;
 - selected patterns create variation across scenes without becoming a closed whitelist;
 - climax changes the scene state but does not automatically terminate it;
-- physical response does not become consent, trust, love, disclosure, healing, or other unsupported relationship truth;
-- the model does not invent the player's unstated arousal, action, consent, or climax.
+- physical response does not become unsupported relationship truth;
+- the model does not author non-inferable player content (Section 7, ED item 2): decisions, voluntary actions, dialogue, consent, relationship meaning, or a bodily response, including arousal or climax, that the player's input has not set up. Premises with defined imposed bodily effects follow their mechanic rule.
+
+### Opening-funnel test
+
+Title names the hook; the Intro's first sentence works alone as the tile line; the Greeting has a charged hook and a playable ending; Scenario offers opening beats; the character's own agenda can surface by the second to fifth reply; every rule that holds back what the player came for has a matching engine (pull check). See [references/opening-funnel.md](references/opening-funnel.md) §8.
+
+### Platform test (OurDream)
+
+Look written in APD prose; Personality option and short fields fit APD; name-translation line present when needed; runtime-critical items in APD/ED when the card will join group chats; every installed tracker follows [references/state-tracking.md](references/state-tracking.md) and its OurDream carrier [references/od-state-adapter.md](references/od-state-adapter.md).
+
+### Decision-coverage test
+
+Every explicit user decision appears in the files; every Ruled-out item is checked against every file; every 06 item names its file and heading ([references/author-notes-06.md](references/author-notes-06.md) §4).
 
 ### Intro-length test
 
 In the default five-file format, `04_Intro.txt` must be 2000 characters or fewer. Do not apply this limit to `05_Greeting.txt` unless another target format explicitly requires it.
 
+### Safety / interaction-control budget test
+
+Identify every safety-like or consent-like statement in the finished card and ask what runtime behavior it uniquely changes.
+- With an explicit safeword / stop control or standing delegated-permission premise, keep the operative control and mechanic-specific boundaries; flag repeated generic consent prose elsewhere as padding.
+- Without such a control, keep player authorship plus at most one concise ED willingness / consent statement when needed; flag additional generic repetitions unless they encode a distinct mechanic.
+- Never remove a user-requested control or a rule whose fiction-specific job is to distinguish imposed bodily effect from voluntary choice, define a power boundary, or preserve another real runtime distinction.
+- Do not count the character's own preferences, standards, moods, or refusals against the budget; they are character logic.
+- Repeated anti-youth negations are padding too: adulthood should rest on positive adult facts in APD plus at most one explicit exclusion (Section 3).
+
+### Priming test
+
+Check that the Greeting does not demonstrate a defect the runtime would copy (Section 9), and that examples inside a limit rule do not hand the model the very event they restrict (a rule capping disruptions should not offer one specific disruption as its showcase example). Also check the **distribution** of examples: if a behavior is meant to be conditional or low-frequency, the examples and Greeting must respect the same trigger and frequency rather than showcasing it so often that priming overrides the prose rule.
+
 ### No-padding test
 
 Every retained section must do a distinct job. Remove same-layer repetition, generic prose that cannot change a generated response, and empty schema-filling. Keep functional repetition across layers only when each occurrence serves a different execution role. A missing heading is not a defect if its function is genuinely absent or cleanly merged elsewhere.
+
+For each suspicious paragraph, ask: **what breaks if this is deleted?** If the honest answer is only "the same point is emphasized one fewer time," delete or merge it. Author-side residue in runtime files (instructions about how the Greeting must be written, notes to the builder) is deleted outright.
 
 ## 11. Output mode
 
 For a full build, structural rewrite, architecture rebuild, or format conversion, read [references/output-modes.md](references/output-modes.md).
 
-Default finished card: five all-English parts: `01 APD`, `02 ED`, `03 Scenario`, `04 Intro`, `05 Greeting`.
+Default finished card: five all-English parts: `01 APD`, `02 ED`, `03 Scenario`, `04 Intro`, `05 Greeting`, plus the author-side `06 Notes` in the user's chat language ([references/author-notes-06.md](references/author-notes-06.md)). 06 is never pasted into any card field; when delivering it, say so in one line (06 is the user's own record, not a card field). `07 State` when the user chooses an external or split backend on OurDream.
 
-For a full default build or full default rebuild, deliver five separate plain-text files:
+For a full default build or full default rebuild, deliver five separate plain-text card files plus the author-side 06 Notes:
 - `01_APD.txt`
 - `02_ED.txt`
 - `03_Scenario.txt`
 - `04_Intro.txt`
 - `05_Greeting.txt`
+- `06_Notes.txt` (author-side record)
 
 If the user explicitly asks for inline text, one combined document, another language, or another platform format, follow that instead.
 
-Do not attach design notes, a module list, or a validation report unless the user asks. The card itself should reveal that the architecture improved.
+Do not attach design notes, a module list, or a validation report unless the user asks; 06 Notes is the one default author-side file and already records decisions, assumptions, installed modules, and versions. The card itself should reveal that the architecture improved.
